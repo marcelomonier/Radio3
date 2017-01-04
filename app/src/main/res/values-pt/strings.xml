@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Radio 3</string>
+    <string name="action_settings">Configurações</string>
+    <string name="nome">Nome</string>
+    <string name="sobrenome">Sobrenome</string>
+    <string name="email">Email</string>
+    <string name="lesao">Localização da lesão</string>
+    <string name="nada">Nada ainda</string>
+    <string name="sexo">Sexo</string>
+    <string name="expansion">Expansão</string>
+    <string name="age">Idade</string>
+    <string name="paretesia">Parestesia</string>
+</resources>
