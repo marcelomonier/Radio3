@@ -30,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
     //Parestesia  (Sim ou não) - ok
 
     //CARACTERÍSTICAS IMAGINOLÓGICAS - ok
-    //Hiperatenuante / Hipoatenuante / Misto
-    // Unilocular ou multilocular
+    //Lesão - Hiperatenuante / Hipoatenuante / Misto
+    // Tecido adiposo - Unilocular ou multilocular
     // Margem: Regular ou Irregular / Bem ou mal definida
     // Cortical marginal (sim ou não)
     //Expansão óssea (Sim ou não)
@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
     String[] localizacao_lesoes = {"Superior", "Inferior", "Superior e Inferior"};
     String[] sexo = {"Masculino", "Feminino"};
     String[] caraimagini = {"Hiperatenuante", "Hipoatenuante", "Misto"};
+    String[] tecidoadiposo = {"Unilocular", "Multilocular"};
 
 
     @Override
@@ -178,6 +179,15 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter<String> adapterlesao = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, caraimagini);
         adapterlesao.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         lesao_imagi_list.setAdapter(adapterlesao);
+
+
+        //Tecido Adiposo
+        TextView textView_TecidoAdiposo = (TextView) findViewById(R.id.textView_tecidoadiposo);
+        Spinner spinner_TecidoAdiposo = (Spinner) findViewById(R.id.tecidoadiposo_list);
+
+        ArrayAdapter<String> adapterTecidoAdiposo = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, tecidoadiposo);
+        adapterTecidoAdiposo.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner_TecidoAdiposo.setAdapter(adapterTecidoAdiposo);
 
 
     }
