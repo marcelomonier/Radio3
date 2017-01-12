@@ -30,10 +30,10 @@ public class MainActivity extends AppCompatActivity {
     //Parestesia  (Sim ou não) - ok
 
     //CARACTERÍSTICAS IMAGINOLÓGICAS - ok
-    //Lesão - Hiperatenuante / Hipoatenuante / Misto
-    // Tecido adiposo - Unilocular ou multilocular
+    //Lesão - Hiperatenuante / Hipoatenuante / Misto - Ok
+    // Tecido adiposo - Unilocular ou multilocular - Ok
     // Margem: Regular ou Irregular / Bem ou mal definida
-    // Cortical marginal (sim ou não)
+    // Cortical marginal (sim ou não) - Ok
     //Expansão óssea (Sim ou não)
     //Deslocamento de dente (sim ou não)
     //Reabsorção radicular (sim ou não)
@@ -188,6 +188,29 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter<String> adapterTecidoAdiposo = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, tecidoadiposo);
         adapterTecidoAdiposo.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner_TecidoAdiposo.setAdapter(adapterTecidoAdiposo);
+
+
+        //Cortical Marginal
+        TextView textView_corticalMarginal = (TextView) findViewById(R.id.corticalMarginal);
+        Switch switch_corticalMarginal = (Switch) findViewById(R.id.corticalMarginal_button);
+
+
+        //Expanão Óssea
+        TextView textView_expansaoOssea = (TextView) findViewById(R.id.textView_expansaoOssea);
+        Switch switch_expansaoOssea = (Switch) findViewById(R.id.expansaoOssea_button);
+
+
+        //Deslocamento de dente
+        TextView textView_deslocamentoDente = (TextView) findViewById(R.id.textView_deslocadente);
+        Switch switch_deslocaDente = (Switch) findViewById(R.id.deslocadente_button);
+
+
+
+
+
+
+
+
 
 
     }
