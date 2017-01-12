@@ -1,8 +1,6 @@
 package marcelomonier.lsdi.ufma.br.radio3;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
@@ -12,7 +10,6 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.ScrollView;
 import android.widget.Spinner;
@@ -25,29 +22,31 @@ public class MainActivity extends AppCompatActivity {
 
     //Campos
 
-    //CARACTERÍSTICAS CLÍNICAS
-  // Idade - Ok
-   //Sexo - Ok
-   //Expansão (Sim ou não) - Ok
-   // Dor (Sim ou não)
-   //Parestesia  (Sim ou não)
-   //CARACTERÍSTICAS IMAGINOLÓGICAS
-   //Hiperatenuante / Hipoatenuante / Misto
-   // Unilocular ou multilocular
-   // Margem: Regular ou Irregular / Bem ou mal definida
-   // Cortical marginal (sim ou não)
-   //Expansão óssea (Sim ou não)
+    //CARACTERÍSTICAS CLÍNICAS - Ok
+    // Idade - Ok
+    //Sexo - Ok
+    //Expansão (Sim ou não) - Ok
+    // Dor (Sim ou não) - ok
+    //Parestesia  (Sim ou não) - ok
+
+    //CARACTERÍSTICAS IMAGINOLÓGICAS - ok
+    //Hiperatenuante / Hipoatenuante / Misto
+    // Unilocular ou multilocular
+    // Margem: Regular ou Irregular / Bem ou mal definida
+    // Cortical marginal (sim ou não)
+    //Expansão óssea (Sim ou não)
     //Deslocamento de dente (sim ou não)
     //Reabsorção radicular (sim ou não)
-   // Associação a dente não irrompido (sim ou não)
-
+    // Associação a dente não irrompido (sim ou não)
 
 
     //Integer[] localizacao_lesoes = {R.string.superior, R.string.inferior, R.string.superior_e_inferior};
     //Integer[] sexo = {R.string.masculino, R.string.feminino};
+    //String[] expansion_list = {"Sim", "Não"};
+
     String[] localizacao_lesoes = {"Superior", "Inferior", "Superior e Inferior"};
     String[] sexo = {"Masculino", "Feminino"};
-    String[] expansion_list = {"Sim", "Não"};
+    String[] caraimagini = {"Hiperatenuante", "Hipoatenuante", "Misto"};
 
 
     @Override
@@ -56,60 +55,63 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+        //CARACTERÍSTICAS CLÍNICAS
+        TextView caraclin = (TextView) findViewById(R.id.caracli);
+
         //Scroll View
         ScrollView scrollView = (ScrollView) findViewById(R.id.scrollView);
 
-        //Cabeçalho
-        AutoCompleteTextView nome = (AutoCompleteTextView) findViewById(R.id.nome);
-        nome.setOnEditorActionListener(new TextView.OnEditorActionListener(){
-
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                if (actionId == EditorInfo.IME_ACTION_NEXT) {
-
-                }
-                return false;
-            }
-
-
-        });
-
-        AutoCompleteTextView sobrenome = (AutoCompleteTextView) findViewById(R.id.sobrenome);
-        sobrenome.setOnEditorActionListener(new TextView.OnEditorActionListener(){
-
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                if (actionId == EditorInfo.IME_ACTION_NEXT) {
-
-                }
-                return false;
-            }
-
-
-        });
-
-
-        AutoCompleteTextView email = (AutoCompleteTextView) findViewById(R.id.email);
-        email.setOnEditorActionListener(new TextView.OnEditorActionListener(){
-
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                if (actionId == EditorInfo.IME_ACTION_NEXT) {
-
-                }
-                return false;
-            }
-
-
-        });
+//        //Cabeçalho
+//        AutoCompleteTextView nome = (AutoCompleteTextView) findViewById(R.id.nome);
+//        nome.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+//
+//            @Override
+//            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+//                if (actionId == EditorInfo.IME_ACTION_NEXT) {
+//
+//                }
+//                return false;
+//            }
+//
+//
+//        });
+//
+//        AutoCompleteTextView sobrenome = (AutoCompleteTextView) findViewById(R.id.sobrenome);
+//        sobrenome.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+//
+//            @Override
+//            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+//                if (actionId == EditorInfo.IME_ACTION_NEXT) {
+//
+//                }
+//                return false;
+//            }
+//
+//
+//        });
+//
+//
+//        AutoCompleteTextView email = (AutoCompleteTextView) findViewById(R.id.email);
+//        email.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+//
+//            @Override
+//            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+//                if (actionId == EditorInfo.IME_ACTION_NEXT) {
+//
+//                }
+//                return false;
+//            }
+//
+//
+//        });
 
         //Localização da lesão
-        TextView lesao = (TextView) findViewById(R.id.textView_lesao);
-        Spinner listlesao = (Spinner) findViewById(R.id.lesaolist);
+        TextView lesao = (TextView) findViewById(R.id.textView_loclesao);
+        Spinner loclistlesao = (Spinner) findViewById(R.id.loclesaolist);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, localizacao_lesoes);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        listlesao.setAdapter(adapter);
+        loclistlesao.setAdapter(adapter);
 
         //Sexo
         TextView sexo_text = (TextView) findViewById(R.id.sexo_text);
@@ -124,12 +126,11 @@ public class MainActivity extends AppCompatActivity {
         Switch expansioSpinner = (Switch) findViewById(R.id.expansion_list);
 
 
-
         //Idade
         TextView age = (TextView) findViewById(R.id.age);
         EditText age_text = (EditText) findViewById(R.id.age_text);
 
-        age_text.setOnEditorActionListener(new TextView.OnEditorActionListener(){
+        age_text.setOnEditorActionListener(new TextView.OnEditorActionListener() {
 
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
@@ -146,29 +147,40 @@ public class MainActivity extends AppCompatActivity {
         TextView parethesia = (TextView) findViewById(R.id.paretesia);
         Switch paterethesia_button = (Switch) findViewById(R.id.paretesia_button);
 
-
+        //Dor
+        TextView text_dor = (TextView) findViewById(R.id.dor);
+        Switch dor_button = (Switch) findViewById(R.id.dor_button);
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                Snackbar.make(view, R.string.nada, Snackbar.LENGTH_SHORT).setAction("Action", null).show();
+//                //Snackbar.make(view, "Nada ainda... Vai gerar os possíveis diagnósticos", Snackbar.LENGTH_SHORT).setAction("Action", null).show();
+//
+//
+//            }
+//        });
 
-                Snackbar.make(view, R.string.nada, Snackbar.LENGTH_SHORT).setAction("Action", null).show();
-                //Snackbar.make(view, "Nada ainda... Vai gerar os possíveis diagnósticos", Snackbar.LENGTH_SHORT).setAction("Action", null).show();
+
+        //CARACTERÍSTICAS IMAGINOLÓGICAS
+        TextView caraimagin = (TextView) findViewById(R.id.caraimagi);
+
+        //Lesão
+        TextView textView_lesao = (TextView) findViewById(R.id.textView_lesao);
+        Spinner lesao_imagi_list = (Spinner) findViewById(R.id.lesao_list);
+
+        ArrayAdapter<String> adapterlesao = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, caraimagini);
+        adapterlesao.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        lesao_imagi_list.setAdapter(adapterlesao);
 
 
-
-
-            }
-        });
     }
-
-
-
 
 
 
