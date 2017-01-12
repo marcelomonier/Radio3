@@ -34,8 +34,8 @@ public class MainActivity extends AppCompatActivity {
     // Tecido adiposo - Unilocular ou multilocular - Ok
     // Margem: Regular ou Irregular / Bem ou mal definida
     // Cortical marginal (sim ou não) - Ok
-    //Expansão óssea (Sim ou não)
-    //Deslocamento de dente (sim ou não)
+    //Expansão óssea (Sim ou não) - Ok
+    //Deslocamento de dente (sim ou não) - Ok
     //Reabsorção radicular (sim ou não)
     // Associação a dente não irrompido (sim ou não)
 
@@ -203,6 +203,7 @@ public class MainActivity extends AppCompatActivity {
         //Deslocamento de dente
         TextView textView_deslocamentoDente = (TextView) findViewById(R.id.textView_deslocadente);
         Switch switch_deslocaDente = (Switch) findViewById(R.id.deslocadente_button);
+
 
 
 
