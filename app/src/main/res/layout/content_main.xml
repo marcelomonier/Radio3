@@ -16,57 +16,67 @@
     tools:showIn="@layout/activity_main" tools:context=".MainActivity"
     android:orientation="vertical">
 
-
-
-    <AutoCompleteTextView
-        android:layout_width="fill_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/nome"
-        android:id="@+id/nome"
-        android:layout_alignParentTop="true"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/caraclini"
+        android:id="@+id/caracli"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:backgroundTint="@color/colorPrimary"
+        android:textStyle="bold|italic"
         />
 
-    <AutoCompleteTextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/nome"
-        android:hint="@string/sobrenome"
-        android:id="@+id/sobrenome"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:backgroundTint="@color/colorPrimary"
-        />
 
-    <AutoCompleteTextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/sobrenome"
-        android:hint="@string/email"
-        android:id="@+id/email"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:backgroundTint="@color/colorPrimary"
-        />
+
+    <!--<AutoCompleteTextView-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="@string/nome"-->
+        <!--android:id="@+id/nome"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_below="@+id/caracli"-->
+        <!--android:backgroundTint="@color/colorPrimary"-->
+        <!--/>-->
+
+    <!--<AutoCompleteTextView-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/nome"-->
+        <!--android:hint="@string/sobrenome"-->
+        <!--android:id="@+id/sobrenome"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:backgroundTint="@color/colorPrimary"-->
+        <!--/>-->
+
+    <!--<AutoCompleteTextView-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/sobrenome"-->
+        <!--android:hint="@string/email"-->
+        <!--android:id="@+id/email"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:backgroundTint="@color/colorPrimary"-->
+        <!--/>-->
 
     <Space
         android:layout_width="50px"
         android:layout_height="50px"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/email"
-        android:layout_alignEnd="@+id/email"
-        android:layout_below="@+id/email"
+
+        android:layout_below="@+id/caracli"
         android:id="@+id/space" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/lesao"
-        android:id="@+id/textView_lesao"
+        android:text="@string/loclesao"
+        android:id="@+id/textView_loclesao"
         android:layout_below="@+id/space"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -76,8 +86,8 @@
     <Spinner
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/lesaolist"
-        android:layout_below="@+id/textView_lesao"
+        android:id="@+id/loclesaolist"
+        android:layout_below="@+id/textView_loclesao"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"></Spinner>
 
@@ -86,9 +96,8 @@
         android:layout_height="50px"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/email"
-        android:layout_alignEnd="@+id/email"
-        android:layout_below="@+id/lesaolist"
+
+        android:layout_below="@+id/loclesaolist"
         android:id="@+id/space2" />
 
     <TextView
@@ -114,8 +123,7 @@
         android:layout_height="50px"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/email"
-        android:layout_alignEnd="@+id/email"
+
         android:layout_below="@+id/sexo_list"
         android:id="@+id/space3" />
 
@@ -143,8 +151,6 @@
         android:layout_height="50px"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/email"
-        android:layout_alignEnd="@+id/email"
         android:layout_below="@+id/expansion_list"
         android:id="@+id/space4" />
 
@@ -173,8 +179,6 @@
         android:layout_height="50px"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/email"
-        android:layout_alignEnd="@+id/email"
         android:layout_below="@+id/age_text"
         android:id="@+id/space5" />
 
@@ -196,6 +200,233 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignRight="@+id/paretesia"/>
+
+    <Space
+        android:layout_width="50px"
+        android:layout_height="50px"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/paretesia_button"
+        android:id="@+id/space6" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/dor"
+        android:id="@+id/dor"
+        android:layout_below="@+id/space6"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Switch
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dor_button"
+        android:layout_below="@+id/space6"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignRight="@+id/paretesia"/>
+
+    <Space
+        android:layout_width="150px"
+        android:layout_height="150px"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/dor_button"
+        android:id="@+id/space7" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/caraimagi"
+        android:id="@+id/caraimagi"
+        android:layout_below="@+id/space7"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textStyle="bold|italic"
+        />
+
+    <Space
+        android:layout_width="50px"
+        android:layout_height="50px"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+
+        android:layout_below="@+id/caraimagi"
+        android:id="@+id/space8" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/lesao"
+        android:id="@+id/textView_lesao"
+        android:layout_below="@+id/space8"
+         />
+
+    <Spinner
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lesao_list"
+        android:layout_below="@+id/textView_lesao"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Space
+        android:layout_width="50px"
+        android:layout_height="50px"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+
+        android:layout_below="@+id/lesao_list"
+        android:id="@+id/space9" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/tecidoadiposo"
+        android:id="@+id/textView_tecidoadiposo"
+        android:layout_below="@+id/space9"
+        />
+
+    <Spinner
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tecidoadiposo_list"
+        android:layout_below="@+id/textView_tecidoadiposo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Space
+        android:layout_width="50px"
+        android:layout_height="50px"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tecidoadiposo_list"
+        android:id="@+id/space10" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/corticalMarginal"
+        android:id="@+id/corticalMarginal"
+        android:layout_below="@+id/space10"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Switch
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/corticalMarginal_button"
+        android:layout_below="@+id/space10"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignRight="@+id/corticalMarginal"/>
+
+    <Space
+        android:layout_width="50px"
+        android:layout_height="50px"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/corticalMarginal_button"
+        android:id="@+id/space11" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/expansaoOssea"
+        android:id="@+id/textView_expansaoOssea"
+        android:layout_below="@+id/space11"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Switch
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/expansaoOssea_button"
+        android:layout_below="@+id/space11"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignRight="@+id/textView_expansaoOssea"/>
+
+    <Space
+    android:layout_width="50px"
+    android:layout_height="50px"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_below="@+id/expansaoOssea_button"
+    android:id="@+id/space12" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/deslocadente"
+        android:id="@+id/textView_deslocadente"
+        android:layout_below="@+id/space12"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Switch
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/deslocadente_button"
+        android:layout_below="@+id/space12"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignRight="@+id/textView_deslocadente"/>
+
+    <Space
+        android:layout_width="50px"
+        android:layout_height="50px"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/deslocadente_button"
+        android:id="@+id/space13" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/rabsradicular"
+        android:id="@+id/textView_rabsradicular"
+        android:layout_below="@+id/space13"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Switch
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rabsradicular_button"
+        android:layout_below="@+id/space13"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignRight="@+id/textView_rabsradicular"/>
+    <Space
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/rabsradicular_button"
+        android:id="@+id/space14" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/procurar_button"
+        android:layout_below="@+id/space14"
+        android:text="@string/procurar"
+        />
+
+
+
+
 
 
 </RelativeLayout>
