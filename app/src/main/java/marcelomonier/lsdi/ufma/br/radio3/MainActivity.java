@@ -1,6 +1,7 @@
 package marcelomonier.lsdi.ufma.br.radio3;
 
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ScrollView;
 import android.widget.Spinner;
@@ -36,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     // Cortical marginal (sim ou não) - Ok
     //Expansão óssea (Sim ou não) - Ok
     //Deslocamento de dente (sim ou não) - Ok
-    //Reabsorção radicular (sim ou não)
+    //Reabsorção radicular (sim ou não) - Ok
     // Associação a dente não irrompido (sim ou não)
 
 
@@ -153,22 +155,6 @@ public class MainActivity extends AppCompatActivity {
         Switch dor_button = (Switch) findViewById(R.id.dor_button);
 
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//                Snackbar.make(view, R.string.nada, Snackbar.LENGTH_SHORT).setAction("Action", null).show();
-//                //Snackbar.make(view, "Nada ainda... Vai gerar os possíveis diagnósticos", Snackbar.LENGTH_SHORT).setAction("Action", null).show();
-//
-//
-//            }
-//        });
-
-
         //CARACTERÍSTICAS IMAGINOLÓGICAS
         TextView caraimagin = (TextView) findViewById(R.id.caraimagi);
 
@@ -205,9 +191,47 @@ public class MainActivity extends AppCompatActivity {
         Switch switch_deslocaDente = (Switch) findViewById(R.id.deslocadente_button);
 
 
+        //Reabsorção radicular
+        TextView textView_rabsradicular = (TextView) findViewById(R.id.textView_rabsradicular);
+        Switch switch_rabsradicular = (Switch) findViewById(R.id.rabsradicular_button);
 
 
+        //Associação a dente não irrompido - Fazer
 
+
+        //Margem: Regular ou Irregular / Bem ou mal definida - Fazer
+
+
+        //Botão de procurar
+        Button procurar_btn = (Button) findViewById(R.id.procurar_button);
+        procurar_btn.setOnClickListener(new View.OnClickListener() {
+
+
+            @Override
+            public void onClick(View view) {
+
+                Snackbar.make(view, R.string.nada, Snackbar.LENGTH_SHORT).setAction("Action", null).show();
+                //Snackbar.make(view, "Nada ainda... Vai gerar os possíveis diagnósticos", Snackbar.LENGTH_SHORT).setAction("Action", null).show();
+
+
+            }
+        });
+
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                Snackbar.make(view, R.string.nada, Snackbar.LENGTH_SHORT).setAction("Action", null).show();
+//                //Snackbar.make(view, "Nada ainda... Vai gerar os possíveis diagnósticos", Snackbar.LENGTH_SHORT).setAction("Action", null).show();
+//
+//
+//            }
+//        });
 
 
 
